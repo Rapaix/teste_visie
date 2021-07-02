@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Teste Visie</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+   <div class="row">
+      <table>
+          <thead>
+              <tr>
+                  <td>Nome</td>
+                  <td>RG</td>
+                  <td>Data de admissão</td>
+                  <td>Ação</td>
+              </tr>
+          </thead>
+          <tbody>
+              {% for lista_ in lista %}
+              <tr>
+                <td>{{lista_[0].split()[0]}}</td>
+                <td>{{ lista_[1]}}</td>
+                <td>{{ lista_[2].strftime('%d/%m/%Y') }}</td>
+                <td>
+                  <form action="/delete/{{lista_[2]}}" method="GET">
+                    <input type="submit" value="Excluir">
+                  </form>
+                </td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+  </div>
+</div>
+</section>
+<section class="section-inserir">
+   <div class="container">
+       <div class="row">
+           <form action="/save" class="form-inline" method="post">
+               <input type="text" name="nome" id="" placeholder="Nome" required>
+               <input type="text" name="rg" placeholder="RG" required> 
+               <input type="text" name="cpf" placeholder="CPF" required> 
+               <input type="text" name="funcao" placeholder="Função" required> 
+               <div class="datas">
+                 <label for="">Data Nascimento</label>
+                 <input type="date" name="data_nasc" required> 
+               </div>
+               <div class="datas">
+                 <label for="">Data Admissão</label>
+                 <input type="date" name="data" required> 
+               </div>
+               <input value="Adicionar" type="submit">
+           </form>
+       </div>
+   </div>
+</section>
+{% endblock %}

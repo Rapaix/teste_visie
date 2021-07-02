@@ -1,0 +1,143 @@
+table {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+thead {
+    color: rgb(250, 250, 250);
+    background-color: #0064c7;
+    border-color: #f8fbff;
+}
+
+td {
+    border: 1px solid #dee2e6;
+    height: 60px;
+    border-right: 0px;
+    border-left: 0px;
+}
+tbody tr:nth-child(2n+2) {
+    background: #a6aeae;
+}
+
+table input[type="submit"] {
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #212529;
+    word-break: break-word;
+    display: block;
+    padding: 10px 20px;
+    float: right;
+}
+
+table input[type="submit"]:hover {
+    background: #ce0c0cd0;
+    color: white;
+}
+
+td:nth-child(2) {
+    width: 40%;
+}
+
+td:first-child {
+    width: 40%;
+}
+
+ .section-inserir form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    /* flex-flow: row wrap; */
+    align-items: center;
+}
+section.section-inserir{
+    
+    width: 100%;
+}
+
+/* 
+section.section-inserir {
+    margin: 30px auto;
+    padding: 0px 15px;
+} */
+
+.section-inserir input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #212529;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px;
+    margin: 5px 0px;
+    float: left;
+} */
+
+.datas label {
+    font-size: 13px;
+    width: 100%;
+    margin: 0px;
+}
+
+.section-inserir input[type="submit"]:hover {
+    background: #12d83a;
+    color: white;
+}
+
+@media (min-width: 768px){
+  table {
+      text-align: center;
+      margin: 30px auto;
+  }
+  .section-inserir input {
+    width: 48%;
+  }
+  .datas {
+    width: 50%;
+  }
+  .section-inserir .datas input {
+    width: 100%;
+  }
+  section.section-inserir {  
+    padding: 0px 0px;
+  }
+}
+
+  /* Add some margins for each label */
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+  }
+  
+  /* Style the input fields */
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  /* Style the submit button */
+  .form-inline button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+  }
+  
+  .form-inline button:hover {
+    background-color: royalblue;
+  }
+  
+  /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+  @media (max-width: 800px) {
+    .form-inline input {
+      margin: 10px 0;
+    }
+  
+    .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
